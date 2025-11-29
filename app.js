@@ -41,7 +41,7 @@ app.get('/todos/:id', (req, res) => {
 
 // Add a new todo with sequential KA-IDs
 app.post('/todos', (req, res) => {
-  const { task } = req.body;   // ✅ use "task" instead of "text"
+  const { task } = req.body;  
   if (!task) {
     return res.status(400).json({ error: 'Todo task is required' });
   }
